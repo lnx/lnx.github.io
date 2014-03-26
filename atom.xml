@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[左手科技右手人文]]></title>
+  <link href="http://lnx.github.io/atom.xml" rel="self"/>
+  <link href="http://lnx.github.io/"/>
+  <updated>2014-03-26T19:44:31+08:00</updated>
+  <id>http://lnx.github.io/</id>
+  <author>
+    <name><![CDATA[武藏]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
