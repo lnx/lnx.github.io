@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[左手科技右手人文]]></title>
-  <link href="http://lnx.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 浮世绘 | 左手科技右手人文]]></title>
+  <link href="http://lnx.github.io/blog/categories/fu-shi-hui/atom.xml" rel="self"/>
   <link href="http://lnx.github.io/"/>
   <updated>2014-03-26T22:46:54+08:00</updated>
   <id>http://lnx.github.io/</id>
@@ -18,7 +18,7 @@
     <link href="http://lnx.github.io/blog/2014/03/26/the-great-wave-of-kanagawa/"/>
     <updated>2014-03-26T21:16:01+08:00</updated>
     <id>http://lnx.github.io/blog/2014/03/26/the-great-wave-of-kanagawa</id>
-    <content type="html"><![CDATA[<p><img src="http://lnx.github.io/images/2014/the_great_wave_of_kanagawa.jpg"></p>
+    <content type="html"><![CDATA[<p><img src="/images/2014/the_great_wave_of_kanagawa.jpg"></p>
 
 <p>葛饰北斋 (1760-1849)</p>
 ]]></content>
