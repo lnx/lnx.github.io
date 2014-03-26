@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://lnx.github.io
+title: 左手科技右手人文
+subtitle: 互联网观察随闻录
+author: 武藏
 simple_search: https://www.google.com/search
-description:
+description: 对科技的过分追求是人类为自己立起的第二座巴别塔
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
