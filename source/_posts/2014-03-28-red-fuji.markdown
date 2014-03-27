@@ -1,0 +1,11 @@
+---
+layout: post
+title: "凯风快晴"
+date: 2014-03-28 07:46:27 +0800
+comments: true
+categories: 浮世绘
+---
+
+{% img /images/2014/red_fuji.jpg %}
+
+葛饰北斋 (1760-1849)
