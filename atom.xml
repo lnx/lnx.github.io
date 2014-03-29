@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[左手科技右手人文]]></title>
+  <title><![CDATA[那些年]]></title>
   <link href="http://lnx.github.io/atom.xml" rel="self"/>
   <link href="http://lnx.github.io/"/>
-  <updated>2014-03-28T08:08:55+08:00</updated>
+  <updated>2014-03-29T10:29:05+08:00</updated>
   <id>http://lnx.github.io/</id>
   <author>
     <name><![CDATA[武藏]]></name>
