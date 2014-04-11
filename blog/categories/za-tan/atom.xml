@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[那些年]]></title>
-  <link href="http://lnx.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 杂谈 | 那些年]]></title>
+  <link href="http://lnx.github.io/blog/categories/za-tan/atom.xml" rel="self"/>
   <link href="http://lnx.github.io/"/>
   <updated>2014-04-12T01:13:32+08:00</updated>
   <id>http://lnx.github.io/</id>
@@ -29,28 +29,6 @@
 <p>其实这方面我最欣赏两个人，一是杨显惠，一是唐德刚。杨显惠的《夹边沟记事》每篇故事都触目惊心，但他就能很好的保持自己与故事之间的距离，不煽情不代入不引导，让读者自行去体会这些文字后面的悲凉。科班出身的唐德刚就更是了得，为胡适写口述传记，即便有师生关系也能从中跳出来，客观的写出大师的局限性。格局境界立判高下。</p>
 
 <p>如烟往事不可捉摸，但至少应尽力使之言之凿凿。这便是我读完此书后所学到的教训。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[凯风快晴]]></title>
-    <link href="http://lnx.github.io/blog/2014/03/28/red-fuji/"/>
-    <updated>2014-03-28T07:46:27+08:00</updated>
-    <id>http://lnx.github.io/blog/2014/03/28/red-fuji</id>
-    <content type="html"><![CDATA[<p><img src="http://lnx.github.io/images/2014/red_fuji.jpg"></p>
-
-<p>葛饰北斋 (1760-1849)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[神奈川冲浪里]]></title>
-    <link href="http://lnx.github.io/blog/2014/03/26/the-great-wave-of-kanagawa/"/>
-    <updated>2014-03-26T21:16:01+08:00</updated>
-    <id>http://lnx.github.io/blog/2014/03/26/the-great-wave-of-kanagawa</id>
-    <content type="html"><![CDATA[<p><img src="http://lnx.github.io/images/2014/the_great_wave_of_kanagawa.jpg"></p>
-
-<p>葛饰北斋 (1760-1849)</p>
 ]]></content>
   </entry>
   
