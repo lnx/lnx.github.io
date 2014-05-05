@@ -4,7 +4,7 @@
   <title><![CDATA[那些年]]></title>
   <link href="http://lnx.github.io/atom.xml" rel="self"/>
   <link href="http://lnx.github.io/"/>
-  <updated>2014-04-12T01:13:32+08:00</updated>
+  <updated>2014-05-06T01:31:06+08:00</updated>
   <id>http://lnx.github.io/</id>
   <author>
     <name><![CDATA[武藏]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[CodeSync]]></title>
+    <link href="http://lnx.github.io/blog/2014/05/06/codesync/"/>
+    <updated>2014-05-06T00:56:33+08:00</updated>
+    <id>http://lnx.github.io/blog/2014/05/06/codesync</id>
+    <content type="html"><![CDATA[<p>CMVC这个上古神兽网络上资料本来就非常少，更别提对应的Eclipse插件相关的文档记录了。为了找到CMVC在哪里保存着文件修改状态，扫描了整个工程目录，通过比对修改时间最终竟还真找到了。</p>
+
+<p>最终成型的CodeSync客户端如下，JavaScript实现。</p>
+
+<p><img src="http://lnx.github.io/images/2014/codesync.jpg"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[如烟往事不可捉摸]]></title>
