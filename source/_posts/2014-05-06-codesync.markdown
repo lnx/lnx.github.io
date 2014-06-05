@@ -3,7 +3,7 @@ layout: post
 title: "CodeSync"
 date: 2014-05-06 00:56:33 +0800
 comments: true
-categories: node-webkit
+categories: ["zh", "node-webkit"]
 ---
 
 CMVC这个上古神兽网络上资料本来就非常少，更别提对应的Eclipse插件相关的文档记录了。为了找到CMVC在哪里保存着文件修改状态，扫描了整个工程目录，通过比对修改时间最终竟还真找到了。
