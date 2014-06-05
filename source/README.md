@@ -1,1 +1,1 @@
-Personal blog powered by Pctopress
+Personal blog powered by Octopress
