@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Coding Honor]]></title>
-  <link href="http://lnx.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: zh | Coding Honor]]></title>
+  <link href="http://lnx.github.io/categories/zh/atom.xml" rel="self"/>
   <link href="http://lnx.github.io/"/>
   <updated>2014-06-06T00:25:38+08:00</updated>
   <id>http://lnx.github.io/</id>
@@ -14,15 +14,6 @@
 
   
   <entry>
-    <title type="html"><![CDATA[John Carmack Said]]></title>
-    <link href="http://lnx.github.io/2014/05/20/john-carmack/"/>
-    <updated>2014-05-20T18:57:39+08:00</updated>
-    <id>http://lnx.github.io/2014/05/20/john-carmack</id>
-    <content type="html"><![CDATA[<blockquote><p>Focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren&rsquo;t sure which way to do something, do it both ways and see which works better.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[CodeSync]]></title>
     <link href="http://lnx.github.io/2014/05/06/codesync/"/>
     <updated>2014-05-06T00:56:33+08:00</updated>
@@ -31,7 +22,7 @@
 
 <p>最终成型的CodeSync客户端如下，JavaScript实现。</p>
 
-<p><img src="http://lnx.github.io/images/2014/codesync.jpg"></p>
+<p><img src="/images/2014/codesync.jpg"></p>
 ]]></content>
   </entry>
   
@@ -59,7 +50,7 @@
     <link href="http://lnx.github.io/2014/03/28/red-fuji/"/>
     <updated>2014-03-28T07:46:27+08:00</updated>
     <id>http://lnx.github.io/2014/03/28/red-fuji</id>
-    <content type="html"><![CDATA[<p><img src="http://lnx.github.io/images/2014/red_fuji.jpg"></p>
+    <content type="html"><![CDATA[<p><img src="/images/2014/red_fuji.jpg"></p>
 
 <p>葛饰北斋 (1760-1849)</p>
 ]]></content>
@@ -70,7 +61,7 @@
     <link href="http://lnx.github.io/2014/03/26/the-great-wave-of-kanagawa/"/>
     <updated>2014-03-26T21:16:01+08:00</updated>
     <id>http://lnx.github.io/2014/03/26/the-great-wave-of-kanagawa</id>
-    <content type="html"><![CDATA[<p><img src="http://lnx.github.io/images/2014/the_great_wave_of_kanagawa.jpg"></p>
+    <content type="html"><![CDATA[<p><img src="/images/2014/the_great_wave_of_kanagawa.jpg"></p>
 
 <p>葛饰北斋 (1760-1849)</p>
 ]]></content>
