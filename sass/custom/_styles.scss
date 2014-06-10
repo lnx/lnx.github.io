@@ -112,3 +112,10 @@ article {
 aside {
 	display: none;
 }
+
+a.external-link {
+	text-decoration:none;
+    color:#000;
+    padding-right:16px;
+	background:url(/images/external-link.png) right center no-repeat;
+}
