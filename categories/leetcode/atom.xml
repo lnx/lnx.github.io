@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: en | Coding Honor]]></title>
-  <link href="http://lnx.github.io/categories/en/atom.xml" rel="self"/>
+  <title><![CDATA[Category: leetcode | Coding Honor]]></title>
+  <link href="http://lnx.github.io/categories/leetcode/atom.xml" rel="self"/>
   <link href="http://lnx.github.io/"/>
   <updated>2014-06-11T02:19:13+08:00</updated>
   <id>http://lnx.github.io/</id>
