@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ukiyoe | Coding Honor]]></title>
-  <link href="http://lnx.github.io/categories/ukiyoe/atom.xml" rel="self"/>
-  <link href="http://lnx.github.io/"/>
-  <updated>2014-06-12T02:04:56+08:00</updated>
-  <id>http://lnx.github.io/</id>
+  <link href="http://blog.codinghonor.com/categories/ukiyoe/atom.xml" rel="self"/>
+  <link href="http://blog.codinghonor.com/"/>
+  <updated>2014-06-12T21:33:27+08:00</updated>
+  <id>http://blog.codinghonor.com/</id>
   <author>
     <name><![CDATA[武藏]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[凯风快晴]]></title>
-    <link href="http://lnx.github.io/2014/03/28/red-fuji/"/>
+    <link href="http://blog.codinghonor.com/2014/03/28/red-fuji/"/>
     <updated>2014-03-28T07:46:27+08:00</updated>
-    <id>http://lnx.github.io/2014/03/28/red-fuji</id>
+    <id>http://blog.codinghonor.com/2014/03/28/red-fuji</id>
     <content type="html"><![CDATA[<p><img src="/images/2014/red_fuji.jpg"></p>
 
 <p>葛饰北斋 (1760-1849)</p>
@@ -26,9 +26,9 @@
   
   <entry>
     <title type="html"><![CDATA[神奈川冲浪里]]></title>
-    <link href="http://lnx.github.io/2014/03/26/the-great-wave-of-kanagawa/"/>
+    <link href="http://blog.codinghonor.com/2014/03/26/the-great-wave-of-kanagawa/"/>
     <updated>2014-03-26T21:16:01+08:00</updated>
-    <id>http://lnx.github.io/2014/03/26/the-great-wave-of-kanagawa</id>
+    <id>http://blog.codinghonor.com/2014/03/26/the-great-wave-of-kanagawa</id>
     <content type="html"><![CDATA[<p><img src="/images/2014/the_great_wave_of_kanagawa.jpg"></p>
 
 <p>葛饰北斋 (1760-1849)</p>
