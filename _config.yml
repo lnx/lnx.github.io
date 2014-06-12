@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://lnx.github.io
+url: http://blog.codinghonor.com
 title: Coding Honor
 subtitle: programming and critical thinking
 author: 武藏
@@ -94,7 +94,7 @@ disqus_short_name: longzhao
 disqus_show_comment_count: 10
 
 # Google Analytics
-google_analytics_tracking_id: UA-49391395-1
+google_analytics_tracking_id: UA-51875143-1
 
 # Facebook Like
 facebook_like: false
