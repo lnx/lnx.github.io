@@ -113,9 +113,8 @@ aside {
 	display: none;
 }
 
-a.external-link {
+a[target=_blank] {
 	text-decoration:none;
-    color:#000;
-    padding-right:16px;
-	background:url(/images/external-link.png) right center no-repeat;
+    padding-right:14px;
+	background:url(/images/external-link.png) right top no-repeat;
 }

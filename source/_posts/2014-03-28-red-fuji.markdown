@@ -3,7 +3,7 @@ layout: post
 title: "凯风快晴"
 date: 2014-03-28 07:46:27 +0800
 comments: true
-categories: ["zh", "ukiyoe"]
+categories: ["ukiyoe", "zh"]
 ---
 
 {% img /images/2014/red_fuji.jpg %}
