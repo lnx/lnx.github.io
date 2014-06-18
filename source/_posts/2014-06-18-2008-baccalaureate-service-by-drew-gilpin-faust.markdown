@@ -56,4 +56,4 @@ I can’t wait to see how you all turn out. Do come back, from time to time, and
 
 _- Drew Gilpin Faust_
 
-Original link: http://www.harvard.edu/president/speech/2008/2008-baccalaureate-service
+_Original link:_ <a href="http://www.harvard.edu/president/speech/2008/2008-baccalaureate-service" target="_blank">_2008 Baccalaureate Service_</a>
