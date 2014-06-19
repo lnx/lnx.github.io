@@ -9,7 +9,7 @@
   <meta name="author" content="武藏">
 
   
-  <meta name="description" content="&ldquo;Life is long. There is always time for Plan B. But don’t begin with it.&rdquo; In the curious custom of this venerable institution, I find &hellip;">
+  <meta name="description" content="如果你是一个愿意雕琢自己代码的开发者，那么你肯定会在每次开发结束以后对其进行一定的总结。因为你知道，从中得出的经验教训将会对下次的开发工作有着非常好的指导意义。当然我也不例外，并时常自满于这四五年来的经验积累。但当这些非常自我的开发经验遇到《代码大全》作者总结的高质量设计特征时， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +86,69 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2014/06/19/11-characteristics-of-high-quality-design/">高质量设计的11个特征</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-19T18:24:13+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>如果你是一个愿意雕琢自己代码的开发者，那么你肯定会在每次开发结束以后对其进行一定的总结。因为你知道，从中得出的经验教训将会对下次的开发工作有着非常好的指导意义。当然我也不例外，并时常自满于这四五年来的经验积累。但当这些非常自我的开发经验遇到《代码大全》作者总结的高质量设计特征时，在短暂的於我心有戚戚焉之后，我陷入了一种无奈——到底还有多少知识的宝藏藏匿于整个知识的疆界中，而我却茫然不知。</p>
+
+<p>从自我批评的角度来看，类似的问题都可以简单的归结于读书不多不广。但客观上来讲，我们其实也可以为自己找一些借口。步入现代社会以后，人类知识积累的速度越来越快。随着知识的疆界变得越来越大，如果我们在知识获取方式上没有一次革新的话，总有一天我们会惊诧于目前获取及使用知识的效率是如此之低效。也许脑机接口将是一个解决该问题的突破口，不过在类似技术还没有成熟起来之前，一些朴素的刻苦读书的道理貌似是目前唯一的解决方案。</p>
+
+<p>看来我也能写这种翻译腔十足、内容空洞无物以及面向程序员的小品文了（<a href="http://blog.jobbole.com/all-posts/" target="_blank">重灾区在这里</a>）。回到正题，实际上下面的关于高质量设计的11个特征应该是本文的重点（内容来自《代码大全》）：</p>
+
+<ol>
+<li><p><strong>最小的复杂度</strong>（Minimal complexity） 设计的首要目标就是要让复杂度最小。要避免做出“聪明的”设计，因为“聪明的”设计常常都是难以理解的。应该做出简单且易于理解的设计。如果你的设计方案不能让你在专注于程序的一部分时安心的忽视其他部分的话，这一设计就没有什么作用了。</p></li>
+<li><p><strong>易于维护</strong>（Ease of maintenance） 易于维护意味着在设计时为做维护工作的程序员着想。请时刻想着这些维护程序员可能会就你写的代码而提出的问题。把这些程序员当成你的听众，进而设计出能自明的（self-explanatory）系统来。</p></li>
+<li><p><strong>松散耦合</strong>（Loose coupling） 松散耦合意味着在设计时让程序的各个组成部分之间关联最小。通过应用类接口中的合理抽象、封装性及信息隐藏等原则，设计出相互关联尽可能最小的类。减少关联也就减少了集成、测试与维护的工作量。</p></li>
+<li><p><strong>可扩展性</strong>（Extensibility） 可扩展性是说你能增强系统的功能而无须破坏其底层结构。你可以改动系统的某一部分而不会影响到其他部分。越是可能发生的改动，越不会给系统造成什么破坏。</p></li>
+<li><p><strong>可重用性</strong>（Reusability） 可重用性意味着所设计的系统的组成部分能在其他系统中重复使用。</p></li>
+<li><p><strong>高扇入</strong>（High fan-in） 高扇入就是说让大量的累使用某个给定的类。这意味着设计出的系统很好的利用了在较低层次上的工具类（utility classes）。</p></li>
+<li><p><strong>低扇出</strong>（Low fan-out） 低扇出就是说让一个类里少量或适中的使用其他的类。高扇出（超过约7个）说明一个类使用了大量其他的类，因此可能变得过于复杂。研究发现，无论考虑某个子程序调用其他子程序的里量，还是考虑某个类使用其他类的量，低扇出的原则都是有益的（Card and Glass 1990; Basili, Briand, and Melo 1996）。</p></li>
+<li><p><strong>可移植性</strong>（Portability） 可移植性是说应该这样设计系统，使它能很方便的移植到其他环境中。</p></li>
+<li><p><strong>精简型</strong>（Leanness） 精简型意味着设计出的系统没有多余的部分（Wirth 1995, McConnnell 1997）。伏尔泰曾说，一本书的完成，不在它不能加入任何内容的时候，而在不能再删去任何内容的时候。在软件领域中，这一观点就更正确，因为任何多余的代码也需要开发、复审和测试，并且当修改了其他代码之后还需要重新考虑它们。软件的后续版本也要和这些多余代码保持向后兼容。要问这个关键的问题：“这虽然简单，但把它加进来之后会损害什么呢？”</p></li>
+<li><p><strong>层次性</strong>（Stratification） 层次性意味着尽量保持系统各个分解层的层次性，使你能在任意的层面上观察系统，并得到某种具有一致性的看法。设计出来的系统应该能在任意层次上观察而不需要进入其他层次。</p></li>
+<li><p><strong>标准技术</strong>（Standard techniques） 一个系统所依赖的外来的、古怪的东西越多，别人在第一次想要理解它的时候就越是头疼。要尽量用标准化的、常用的方法，让整个系统给人一种熟悉的感觉。</p></li>
+</ol>
+
+
+<p>放弃那些无聊又浪费时间的小品文吧，多读领域内的经典书籍，无论是技能还是逼格都会得到极大的提升。</p>
+
+<p>最后列上自己最近在读的两本书。与君共勉！</p>
+
+<p><a href="http://book.douban.com/subject/1477390/" target="_blank"><em>《代码大全》</em></a></p>
+
+<p><a href="http://book.douban.com/subject/1139426/" target="_blank"><em>《数据结构与算法分析：C语言描述》</em></a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -474,6 +537,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/06/19/11-characteristics-of-high-quality-design/">高质量设计的11个特征</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/06/18/2008-baccalaureate-service-by-drew-gilpin-faust/">2008 Baccalaureate Service by Drew Gilpin Faust</a>
       </li>
     
@@ -487,10 +554,6 @@
     
       <li class="post">
         <a href="/2014/05/20/john-carmack/">John Carmack Said</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2014/05/06/codesync/">CodeSync</a>
       </li>
     
   </ul>
