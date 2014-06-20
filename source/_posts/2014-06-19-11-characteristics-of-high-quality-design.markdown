@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "高质量设计的11个特征"
+title: "高质量设计的十一个特征"
 date: 2014-06-19 18:24:13 +0800
 comments: true
 categories: ["book", "program", "zh"]
