@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: network | Coding Honor]]></title>
+  <link href="http://blog.codinghonor.com/categories/network/atom.xml" rel="self"/>
+  <link href="http://blog.codinghonor.com/"/>
+  <updated>2014-06-21T01:36:36+08:00</updated>
+  <id>http://blog.codinghonor.com/</id>
+  <author>
+    <name><![CDATA[武藏]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Network Attacks]]></title>
+    <link href="http://blog.codinghonor.com/2014/06/21/network-attacks/"/>
+    <updated>2014-06-21T01:00:00+08:00</updated>
+    <id>http://blog.codinghonor.com/2014/06/21/network-attacks</id>
+    <content type="html"><![CDATA[<p>Facebook being massive DDOS attack by China showed on Norse Attack Timeline</p>
+
+<p><img src="/images/2014/network_attack.jpg"></p>
+
+<p>This is the <a href="https://www.youtube.com/watch?v=efmJsENgG-o" target="_blank">video</a> on youtube.</p>
+]]></content>
+  </entry>
+  
+</feed>
