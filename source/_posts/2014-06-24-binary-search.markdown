@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "读震惊之二分查找"
+title: "二分查找"
 date: 2014-06-24 21:39:09 +0800
 comments: true
-categories: ["read-and-shocked", "algorithm", "zh"]
+categories: ["algorithm", "zh"]
 ---
 
 {% img /images/2014/knuth.jpg %}
@@ -28,7 +28,7 @@ categories: ["read-and-shocked", "algorithm", "zh"]
 
 看到这里时我已热泪盈眶，这六个月高老爷子到底是如何组织自己的代码的，这才应该是真正意义上的最强大脑。当然也可以理解这是一种偏执，见仁见智罢了。有时候不去过分的迷信权威其实对于破立是非常有好处的（推荐阅读王垠的<a href="http://www.yinwang.org/blog-cn/2014/01/04/authority/" target="_blank">《我和权威的故事》</a>）。
 
-## 二分查找
+## 那些坑
 
 回到正题，接着说二分查找。究竟这里的二分查找难在什么地方，竟引得无数英雄折腰于此！我觉得这个问题至少存在以下3个坑（对那些基本功扎实的程序员来说：空中飘来五个字，这都不是事儿！）：
 
