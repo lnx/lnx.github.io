@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tyrant | Coding Honor]]></title>
+  <link href="http://blog.codinghonor.com/categories/tyrant/atom.xml" rel="self"/>
+  <link href="http://blog.codinghonor.com/"/>
+  <updated>2014-07-04T02:12:34+08:00</updated>
+  <id>http://blog.codinghonor.com/</id>
+  <author>
+    <name><![CDATA[武藏]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[暴君]]></title>
+    <link href="http://blog.codinghonor.com/2014/07/04/tyrant/"/>
+    <updated>2014-07-04T01:46:53+08:00</updated>
+    <id>http://blog.codinghonor.com/2014/07/04/tyrant</id>
+    <content type="html"><![CDATA[<p><img src="/images/2014/tyrant.jpg"></p>
+
+<blockquote><p><em>《暴君》的创意是我见过的电视剧中最棒的一部,这部剧让我兴奋。 &mdash; 李安</em></p></blockquote>
+
+<p>最近在看<a href="http://movie.douban.com/subject/22232279/" target="_blank">《暴君》</a>这部美剧，由《国土安全》制作人 Howard Gordon、Gideon Raff 及《迷失》制作人 Craig Wright 共同制作，讲述一个普通美国家庭被卷入中东国家暴乱的故事。</p>
+]]></content>
+  </entry>
+  
+</feed>
