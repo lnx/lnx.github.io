@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>John Carmack Said - Coding Honor</title>
+  <title>散列的探测次数 - Coding Honor</title>
   <meta name="author" content="武藏">
 
   
-  <meta name="description" content="Focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren& &hellip;">
+  <meta name="description" content="散列是一种用于以常数平均时间执行插入、删除和查找的技术，想必大家对此都非常的熟悉。但如果问每次插入、删除亦或是查找平均都需要几次探测时，不见得就有那么多人能迅速答出来了。本着Flaunt的目的，本文将会带领大家一探究竟。（这么简单的一句竟然两次目的得逞！星宿老仙，法力无边！） &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.codinghonor.com/2014/05/20/john-carmack">
+  <link rel="canonical" href="http://blog.codinghonor.com/2014/07/09/detection-number-of-hashing">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Coding Honor" type="application/atom+xml">
@@ -96,7 +96,7 @@
   
   <header>
     
-      <h1 class="entry-title">John Carmack Said</h1>
+      <h1 class="entry-title">散列的探测次数</h1>
     
     
       <p class="meta">
@@ -112,14 +112,47 @@
   
 
 
-<time datetime="2014-05-20T18:57:39+08:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+<time datetime="2014-07-09T00:31:20+08:00" pubdate data-updated="true">Jul 9<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><blockquote><p><em>Focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren&rsquo;t sure which way to do something, do it both ways and see which works better.</em></p></blockquote>
+<div class="entry-content"><p>散列是一种用于以常数平均时间执行插入、删除和查找的技术，想必大家对此都非常的熟悉。但如果问每次插入、删除亦或是查找平均都需要几次探测时，不见得就有那么多人能迅速答出来了。本着Flaunt的目的，本文将会带领大家一探究竟。（这么简单的一句竟然两次目的得逞！星宿老仙，法力无边！）</p>
+
+<p>理想的散列表数据结构只不过是一个包含有关键字的具有固定大小的数组，并将关键字从0映射到TableSize-1的数组空间中去。但有人的地方就有江湖，有数据的地方就会有冲突（我叫王家卫）。特别是当关键字数量无限数组空间大小已定时，冲突几乎是无法避免的。这时自然就需要一个专门处理冲突的大侠来主持公道了。</p>
+
+<p>总的来看，这位大侠处理冲突一般有两种思路：</p>
+
+<p>1.分离链接法：将所有散列到同一个值的元素保留到一个链表中，理论上可以插入任意多的元素。</p>
+
+<p>2.开放定址法：冲突发生时，尝试选择另外的单元，直到找到为止。（大侠和的一手好稀泥！）</p>
+
+<p><img src="/images/emoticon/ffwe.jpg"></p>
+
+<p>直观上来看，两种散列在实现效率上必定有所差异。如何来量化这种差异，便要引入平均探测次数的概念了。这里我们以开放定址法为例进行讨论。在冲突函数的选择上，由于线性探测、平方探测或者双散列都不是本文的讨论重点，所以采用随机冲突解法（理论上最优）。另外数组中数据的多少明显也会影响到插入或者查找时所需探测的次数，所以还得引入装填因子λ的概念。我们定义散列表的装填因子λ为散列表中的元素个数与散列表大小的比值。</p>
+
+<p>有了这些铺垫后便可以探讨随机冲突解决方式的平均探测次数了。假设有一个很大的表，并且每次探测都与前面的探测无关（其实就是想表达随机探测的意思），首先让我们来看看一次不成功查找的期望探测次数。由于空单元所占的份额为1-λ，因此我们预计要探测的单元数是1/(1-λ)。<strong>一次成功查找的探测次数等于该特定元素插入时所需要的探测次数。当一个元素被插入时，可以看成是一次不成功查找的结果。因此，我们可以使用一次不成功查找的开销来计算一次成功查找的平均开销。</strong></p>
+
+<p>由于λ在0到当前值之间变化，早期的插入操作开销肯定较小，所以平均开销会相应有所降低，不是简单的1/(1-λ)。我们可以通过使用积分计算插入时间平均值的方法来估计平均值，最终可得：</p>
+
+<p>$$ I(\lambda) = \frac{1}{\lambda} \int_0^\lambda \frac{1}{1-x} \mathrm{d}x = \frac{1}{\lambda} ln \frac{1}{1-\lambda} $$</p>
+
+
+<p>明显小于前面的预计探测次数1/(1-λ)。根据公式，我们绘制曲线图比较了线性探测与随机冲突解决方法的性能优劣，如下图所示：</p>
+
+<p><img src="/images/2014/detection_number_of_hashing.jpg"></p>
+
+<p><strong>S为成功查找；U为不成功查找；而I为插入</strong></p>
+
+<p><em>使用线性探测方法插入与不成功查找的期望探测次数为0.5*(1+1/(1-λ)<sup>2</sup>)，对于成功查找为0.5(1+1/(1-λ))，这里不做推导。</em></p>
+
+<p>可以看出随机方法的成功查找平均探测次数显然优于线性探测方法（理论最优嘛！）。例如λ=0.5时，随机方法的成功查找平均需要1.39次探测，线性探测方法成功查找需要1.5次探测（插入需要2.5次探测）。如果λ大于0.75，线性探测所需的探测次数上升明显，已经非常不适合继续使用。这种情况下只能再散列或者使用可扩散列的办法解决散列表过满的问题。</p>
+
+<p>打完收工！</p>
+
+<p><em>所有内容均参考自《数据结构与算法分析 &ndash; C语言描述》</em></p>
 </div>
 
 
@@ -142,12 +175,12 @@
   
 
 
-<time datetime="2014-05-20T18:57:39+08:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+<time datetime="2014-07-09T00:31:20+08:00" pubdate data-updated="true">Jul 9<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/categories/en/'>en</a>, <a class='category' href='/categories/saying/'>saying</a>
+    <a class='category' href='/categories/algorithm/'>algorithm</a>, <a class='category' href='/categories/zh/'>zh</a>
   
 </span>
 
@@ -163,10 +196,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2014/05/06/codesync/" title="Previous Post: CodeSync">&laquo; CodeSync</a>
+        <a class="basic-alignment left" href="/2014/07/04/tyrant/" title="Previous Post: 暴君">&laquo; 暴君</a>
       
-      
-        <a class="basic-alignment right" href="/2014/06/14/spains-first-match/" title="Next Post: Spain's First Match of 2014 World Cup">Spain's First Match of 2014 World Cup &raquo;</a>
       
     </p>
   </footer>
@@ -233,8 +264,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.codinghonor.com/2014/05/20/john-carmack/';
-        var disqus_url = 'http://blog.codinghonor.com/2014/05/20/john-carmack/';
+        var disqus_identifier = 'http://blog.codinghonor.com/2014/07/09/detection-number-of-hashing/';
+        var disqus_url = 'http://blog.codinghonor.com/2014/07/09/detection-number-of-hashing/';
         var disqus_script = 'embed.js';
       
     (function () {
