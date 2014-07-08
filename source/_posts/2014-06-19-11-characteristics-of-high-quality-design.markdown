@@ -40,4 +40,4 @@ categories: ["book", "program", "zh"]
 
 <a href="http://book.douban.com/subject/1477390/" target="_blank">_《代码大全》_</a>
 
-<a href="http://book.douban.com/subject/1139426/" target="_blank">_《数据结构与算法分析：C语言描述》_</a>
+<a href="http://book.douban.com/subject/1139426/" target="_blank">_《数据结构与算法分析 - C语言描述》_</a>
