@@ -6,6 +6,6 @@ comments: true
 categories: ["ukiyoe", "zh"]
 ---
 
-{% img /images/2014/red_fuji.jpg %}
+{% img /images/2014/red-fuji.jpg %}
 
 葛饰北斋 (1760-1849)

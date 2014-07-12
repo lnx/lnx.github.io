@@ -28,7 +28,7 @@ categories: ["algorithm", "zh"]
 
 明显小于前面的预计探测次数1/(1-λ)。根据公式，我们绘制曲线图比较了线性探测与随机冲突解决方法的性能优劣，如下图所示：
 
-{% img /images/2014/detection_number_of_hashing.jpg %}
+{% img /images/2014/detection-number-of-hashing.jpg %}
 
 **S为成功查找；U为不成功查找；而I为插入**
 

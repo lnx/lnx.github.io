@@ -6,6 +6,6 @@ comments: true
 categories: ["ukiyoe", "zh"]
 ---
 
-{% img /images/2014/the_great_wave_of_kanagawa.jpg %}
+{% img /images/2014/the-great-wave-of-kanagawa.jpg %}
 
 葛饰北斋 (1760-1849)

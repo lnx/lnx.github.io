@@ -8,6 +8,6 @@ categories: ["facebook", "network", "en"]
 
 Facebook being massive DDOS attack by China showed on Norse Attack Timeline
 
-{% img /images/2014/network_attack.jpg %}
+{% img /images/2014/network-attack.jpg %}
 
 This is the <a href="https://www.youtube.com/watch?v=efmJsENgG-o" target="_blank">video</a> on youtube.
