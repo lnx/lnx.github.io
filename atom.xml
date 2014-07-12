@@ -4,7 +4,7 @@
   <title><![CDATA[Coding Honor]]></title>
   <link href="http://blog.codinghonor.com/atom.xml" rel="self"/>
   <link href="http://blog.codinghonor.com/"/>
-  <updated>2014-07-10T01:32:35+08:00</updated>
+  <updated>2014-07-12T19:19:35+08:00</updated>
   <id>http://blog.codinghonor.com/</id>
   <author>
     <name><![CDATA[武藏]]></name>
@@ -64,7 +64,7 @@
 
 <p>明显小于前面的预计探测次数1/(1-λ)。根据公式，我们绘制曲线图比较了线性探测与随机冲突解决方法的性能优劣，如下图所示：</p>
 
-<p><img src="http://blog.codinghonor.com/images/2014/detection_number_of_hashing.jpg"></p>
+<p><img src="http://blog.codinghonor.com/images/2014/detection-number-of-hashing.jpg"></p>
 
 <p><strong>S为成功查找；U为不成功查找；而I为插入</strong></p>
 
@@ -245,7 +245,7 @@
     <id>http://blog.codinghonor.com/2014/06/21/network-attacks</id>
     <content type="html"><![CDATA[<p>Facebook being massive DDOS attack by China showed on Norse Attack Timeline</p>
 
-<p><img src="http://blog.codinghonor.com/images/2014/network_attack.jpg"></p>
+<p><img src="http://blog.codinghonor.com/images/2014/network-attack.jpg"></p>
 
 <p>This is the <a href="https://www.youtube.com/watch?v=efmJsENgG-o" target="_blank">video</a> on youtube.</p>
 ]]></content>
@@ -441,7 +441,7 @@
     <link href="http://blog.codinghonor.com/2014/03/28/red-fuji/"/>
     <updated>2014-03-28T07:46:27+08:00</updated>
     <id>http://blog.codinghonor.com/2014/03/28/red-fuji</id>
-    <content type="html"><![CDATA[<p><img src="http://blog.codinghonor.com/images/2014/red_fuji.jpg"></p>
+    <content type="html"><![CDATA[<p><img src="http://blog.codinghonor.com/images/2014/red-fuji.jpg"></p>
 
 <p>葛饰北斋 (1760-1849)</p>
 ]]></content>
@@ -452,7 +452,7 @@
     <link href="http://blog.codinghonor.com/2014/03/26/the-great-wave-of-kanagawa/"/>
     <updated>2014-03-26T21:16:01+08:00</updated>
     <id>http://blog.codinghonor.com/2014/03/26/the-great-wave-of-kanagawa</id>
-    <content type="html"><![CDATA[<p><img src="http://blog.codinghonor.com/images/2014/the_great_wave_of_kanagawa.jpg"></p>
+    <content type="html"><![CDATA[<p><img src="http://blog.codinghonor.com/images/2014/the-great-wave-of-kanagawa.jpg"></p>
 
 <p>葛饰北斋 (1760-1849)</p>
 ]]></content>
