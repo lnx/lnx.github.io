@@ -4,7 +4,7 @@
   <title><![CDATA[Category: zh | Coding Honor]]></title>
   <link href="http://blog.codinghonor.com/categories/zh/atom.xml" rel="self"/>
   <link href="http://blog.codinghonor.com/"/>
-  <updated>2014-09-23T21:36:37+08:00</updated>
+  <updated>2014-11-27T00:35:57+08:00</updated>
   <id>http://blog.codinghonor.com/</id>
   <author>
     <name><![CDATA[武藏]]></name>
@@ -12,6 +12,126 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Morris二叉树遍历算法]]></title>
+    <link href="http://blog.codinghonor.com/2014/11/26/morris-traversal/"/>
+    <updated>2014-11-26T18:08:46+08:00</updated>
+    <id>http://blog.codinghonor.com/2014/11/26/morris-traversal</id>
+    <content type="html"><![CDATA[<h2>背景</h2>
+
+<p>二叉树的前中后序遍历算法是计算机领域的基础算法，一般采用递归或者栈来实现。时间复杂度为O(n)，空间复杂度为O(logn)。1968年，Knuth提出说能否将该问题的空间复杂度压缩到O(1)，同时原树的结构不能改变。大约十年后，1979年，Morris在《Traversing Binary Trees Simply and Cheaply》这篇论文中用一种Threaded Binary Tree的方法解决了该问题。</p>
+
+<h2>Threaded Binary Tree</h2>
+
+<p>为了实现O(1)空间复杂度的遍历，Threaded Binary Tree对普通二叉树进行了一些改造，将每一个节点在中序遍历时的前驱节点的右子树指向自己。说起来比较绕口，不过参考下面的示意图就会马上明白是怎么回事。</p>
+
+<p><img src="/images/2014/threaded_binary_tree.jpg"></p>
+
+<p>Morris算法在遍历过程中动态的构建Threaded Binary Tree，同时在结束时又将树恢复原样，在满足O(1)空间复杂度的同时也恰好满足Knuth对树结构不能改变的要求。</p>
+
+<h2>前序与中序遍历</h2>
+
+<p>下面给出前序遍历的Morris实现，程序最核心的部分是寻找每个节点的前驱节点，并根据前驱节点右子树是否为空来决定当前节点是否被访问过。</p>
+
+<p>``` java Preorder Traversal
+List<Integer> preOrder(TreeNode root) {</p>
+
+<pre><code>List&lt;Integer&gt; ret = new ArrayList&lt;&gt;();
+TreeNode cur = root;
+while (cur != null) {
+    if (cur.left == null) {
+        ret.add(cur.val);
+        cur = cur.right;
+    } else {
+        TreeNode pre = cur.left;
+        while (pre.right != null &amp;&amp; pre.right != cur) {
+            pre = pre.right;
+        }
+        if (pre.right == null) {
+            pre.right = cur;
+            ret.add(cur.val);// 前序遍历
+            cur = cur.left;
+        } else {
+            pre.right = null;
+            cur = cur.right;
+        }
+    }
+}
+return ret;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>中序遍历与前序遍历相似，只需要将第15行的 ret.add(cur.val) 添加到第19行 cur=cur.right 的前面就可以了。掌握了前序和后序遍历的O(1)空间复杂度实现，大家可以暂时停下来想一想，我们该如何实现后序遍历？</p>
+
+<h2>后序遍历</h2>
+
+<p>算法思想与前序和中序遍历一致，只不过我们需要添加一个新的根节点，这个新的根节点的左子树为原树的根节点，右子树为空。假设当前节点为cur，在遍历完了cur.left的左子树以后，我们逆向遍历从cur.left到cur的中序遍历前驱节点间的所有节点，这样就可以实现cur的左子树的后序遍历。因为最开始我们添加了一个新的根节点，它的左子树是原树，所以可以保证最终我们能够得到整个树的后序遍历。</p>
+
+<p>``` java Postorder Traversal
+List<Integer> postOrder(TreeNode root) {</p>
+
+<pre><code>List&lt;Integer&gt; ret = new ArrayList&lt;&gt;();
+TreeNode cur = new TreeNode(-1);
+cur.left = root;
+while (cur != null) {
+    if (cur.left == null) {
+        cur = cur.right;
+    } else {
+        TreeNode pre = cur.left;
+        while (pre.right != null &amp;&amp; pre.right != cur) {
+            pre = pre.right;
+        }
+        if (pre.right == null) {
+            pre.right = cur;
+            cur = cur.left;
+        } else {
+            pre.right = null;
+            reverse(cur.left);
+            TreeNode node = pre;
+            while (node != null) {
+                ret.add(node.val);
+                node = node.right;
+            }
+            reverse(pre);
+            cur = cur.right;
+        }
+    }
+}
+return ret;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>``` java Reverse
+void reverse(TreeNode node) {</p>
+
+<pre><code>TreeNode cur = null;
+while (node != null) {
+    TreeNode next = node.right;
+    node.right = cur;
+    cur = node;
+    node = next;
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<h2>时间复杂度</h2>
+
+<p>表面上看我们的程序中包含有两层的while循环，但实际上Morris算法的时间复杂度仍然是O(n)。对于前序和中序遍历，假设有n个节点，二叉树中的n-1条边每条边最多被访问2次。第一次是确定当前节点的前驱节点，第二次是从前驱节点返回到当前节点以后的再次访问。所以总体上来看，算法复杂度是O(2n)=O(n)。</p>
+
+<p>对于后序遍历，因为比前序和中序遍历多了两次反转操作(reverse)，这就导致每条边最多被访问4次，最终算法复杂度是O(4n)=O(n)。</p>
+
+<h2>总结</h2>
+
+<p>Morris算法虽然在时间复杂度上有着系数级别的差异，但却带来了空间复杂度量级上的降低。总体看来，在某些空间苛刻的场景中，该算法非常实用。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[戚继光与俞大猷]]></title>
@@ -117,19 +237,6 @@
 <p>打完收工！</p>
 
 <p><em>所有内容均参考自《数据结构与算法分析 &ndash; C语言描述》</em></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[暴君]]></title>
-    <link href="http://blog.codinghonor.com/2014/07/04/tyrant/"/>
-    <updated>2014-07-04T01:46:53+08:00</updated>
-    <id>http://blog.codinghonor.com/2014/07/04/tyrant</id>
-    <content type="html"><![CDATA[<p><img src="/images/2014/tyrant.jpg"></p>
-
-<blockquote><p><em>《暴君》的创意是我见过的电视剧中最棒的一部,这部剧让我兴奋。 &mdash; 李安</em></p></blockquote>
-
-<p>最近在看<a href="http://movie.douban.com/subject/22232279/" target="_blank">《暴君》</a>这部美剧，由《国土安全》制作人 Howard Gordon、Gideon Raff 及《迷失》制作人 Craig Wright 共同制作，讲述一个普通美国家庭被卷入中东国家暴乱的故事。</p>
 ]]></content>
   </entry>
   
