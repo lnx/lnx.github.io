@@ -92,11 +92,11 @@ List<Integer> postOrder(TreeNode root) {
 
 ``` java Reverse
 void reverse(TreeNode node) {
-	TreeNode cur = null;
+	TreeNode prev = null;
 	while (node != null) {
 		TreeNode next = node.right;
-		node.right = cur;
-		cur = node;
+		node.right = prev;
+		prev = node;
 		node = next;
 	}
 }
