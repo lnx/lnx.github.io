@@ -270,11 +270,11 @@
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 </pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kt">void</span> <span class="nf">reverse</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>  <span class="n">TreeNode</span> <span class="n">cur</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>  <span class="n">TreeNode</span> <span class="n">prev</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 </span><span class='line'>  <span class="k">while</span> <span class="o">(</span><span class="n">node</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
 </span><span class='line'>      <span class="n">TreeNode</span> <span class="n">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">;</span>
-</span><span class='line'>      <span class="n">node</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="n">cur</span><span class="o">;</span>
-</span><span class='line'>      <span class="n">cur</span> <span class="o">=</span> <span class="n">node</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">node</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="n">prev</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">prev</span> <span class="o">=</span> <span class="n">node</span><span class="o">;</span>
 </span><span class='line'>      <span class="n">node</span> <span class="o">=</span> <span class="n">next</span><span class="o">;</span>
 </span><span class='line'>  <span class="o">}</span>
 </span><span class='line'><span class="o">}</span>
