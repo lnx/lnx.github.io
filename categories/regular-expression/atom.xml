@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: regular-expression | Coding Honor]]></title>
+  <link href="http://blog.codinghonor.com/categories/regular-expression/atom.xml" rel="self"/>
+  <link href="http://blog.codinghonor.com/"/>
+  <updated>2015-03-03T14:44:51+08:00</updated>
+  <id>http://blog.codinghonor.com/</id>
+  <author>
+    <name><![CDATA[武藏]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[正则表达式中的IP提取与质数判断]]></title>
+    <link href="http://blog.codinghonor.com/2015/03/03/ip-and-prime-regular-expression-match/"/>
+    <updated>2015-03-03T13:05:59+08:00</updated>
+    <id>http://blog.codinghonor.com/2015/03/03/ip-and-prime-regular-expression-match</id>
+    <content type="html"><![CDATA[<p>本文介绍两个正则表达式的应用实例，希望能有所帮助。</p>
+
+<h2>IP提取</h2>
+
+<p>判断IP是否合法的正则表达式网络上有很多，一般只需注意IP的数值边界就可以。以下就是Java中该类正则表达式的写法：</p>
+
+<p><code>java
+((2[0-4]\\d|25[0-5]|1\\d\\d|\\d\\d?)\\.){3}(2[0-4]\\d|25\\d|1\\d\\d|\\d\\d?)
+</code></p>
+
+<p>但直接用上面的正则表达式抽取文本文件中的IP存在一个问题，虽然这里考虑了0-255边界的问题，但诸如“Current IP: 2255.0.0.1”中的“2255.0.0.1”还是会以“255.0.0.1”的方式被抽取出来。实际上这是一个不合法的IP，并不应该被匹配。</p>
+
+<p>为了解决这个问题，考虑过用正则表达式中的零宽度匹配。不过这里给出的是另外一种解决方案，利用正则分组的方式。代码如下：</p>
+
+<p>``` java IP Extract
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;</p>
+
+<p>public class Test {</p>
+
+<pre><code>List&lt;String&gt; extract(String line) {
+    List&lt;String&gt; ret = new ArrayList&lt;&gt;();
+    if (line != null) {
+        String regex = "(^|[^\\d])(((2[0-4]\\d|25[0-5]|1\\d\\d|\\d\\d?)\\.){3}(2[0-4]\\d|25\\d|1\\d\\d|\\d\\d?))";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(line);
+        while (m.find()) {
+            ret.add(m.group(2));
+        }
+    }
+    return ret;
+}
+
+public static void main(String[] args) {
+    String line = "Current IP: 192.168.1.1, 2255.0.0.1 and 1.0.0.0";
+    System.out.println(new Test().extract(line));
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p><code>java Console Result
+[192.168.1.1, 1.0.0.0]
+</code></p>
+
+<h2>质数判断</h2>
+
+<p>除了常规的字符串抽取以外，正则表达式还可以做一些以前我根本没有想到过的事情，比如这里的质数判断。</p>
+
+<p>``` java Prime Valid
+boolean valid(int num) {</p>
+
+<pre><code>return num &gt;= 0 &amp;&amp; !String.format("%0" + num + "d", 0).matches("^0?$|^(00+?)\\1+$");
+</code></pre>
+
+<p>}
+```</p>
+
+<p>利用的是能否被其它数整除来做，思路挺巧妙的。具体解释这里就不作说明了，网络上有大量的介绍文章。每次看到这种近乎于炫技的代码，自己虽然不排斥，但过后总会思考，这些到底算不算茴香豆的四种写法。</p>
+]]></content>
+  </entry>
+  
+</feed>
