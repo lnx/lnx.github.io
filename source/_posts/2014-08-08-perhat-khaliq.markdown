@@ -6,7 +6,7 @@ comments: true
 categories: ["the-voice-of-china", "music", "zh"]
 ---
 
-<embed src="http://player.youku.com/player.php/sid/XNzUwNzA5Nzc2/v.swf" allowFullScreen="true" quality="high" width="600" height="500" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+{% img /images/2014/perhat-khaliq.jpg %}
 
 _帕尔哈提的酸奶子乐队在德国的表演_
 
