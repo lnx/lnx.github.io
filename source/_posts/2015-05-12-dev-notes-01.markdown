@@ -1,0 +1,55 @@
+---
+layout: post
+title: "Dev Notes 01"
+date: 2015-05-12 01:37:18 +0800
+comments: true
+categories: ["dev-notes", "git", "linux", "en"]
+---
+
+These days I am trying my best effort to adapt to the new environment. A lot of things need to learn, a lot of people need to know.
+
+During this period, I read a number of articles. Some of them are really good ones and worth to record here.
+
+## git
+
+Most of my spare time is spending on reading git related articles, which is well worth. After a lot of reading, finally, I got agreed with the point of view that we should "Commit Often, Perfect Later, Publish Once".
+
+1 [Commit Often, Perfect Later, Publish Once: Git Best Practices](https://sethrobertson.github.io/GitBestPractices/)
+
+Git is amazing for its free branching, so we'd better make use of this. After learning from the article below, we could become a guru in git branch technology.
+
+2 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+
+{% img /images/2015/git-model.png %}
+
+At last, there is a very cool site, where we could find some really good tutorials and articles about git.
+
+3 [https://www.atlassian.com/git/](https://www.atlassian.com/git/)
+
+## linux performance
+
+There are many very useful tools in linux. I have a chance to use several of them during the work, like: strace, ltrace, pdb, etc.
+
+{% img /images/2015/linux-observability-tools.png %}
+
+Above is a detailed "Linux Performance Observability Tools" diagram, from here:
+
+5 [http://www.brendangregg.com/linuxperf.html](http://www.brendangregg.com/linuxperf.html)
+
+## unit test
+
+Before joining this team, I seldom wrote unit tests. So there are lots of things I need to catch up. There are two articles about BDD test:
+
+6 [Introducing BDD](http://dannorth.net/introducing-bdd/)
+
+7 [Mocks Aren't Stubs](http://martinfowler.com/articles/mocksArentStubs.html)
+
+## timing and profiling
+
+When I tried to analyze my python code, these tools (lprun, mprun, timeit, etc) in IPython help a lot.
+
+8 [Timing and Profiling in IPython](http://pynash.org/2013/03/06/timing-and-profiling.html)
+
+<br>
+
+That's all.
