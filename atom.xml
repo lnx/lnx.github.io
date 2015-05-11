@@ -4,7 +4,7 @@
   <title><![CDATA[Coding Honor]]></title>
   <link href="http://blog.codinghonor.com/atom.xml" rel="self"/>
   <link href="http://blog.codinghonor.com/"/>
-  <updated>2015-03-30T22:30:13+08:00</updated>
+  <updated>2015-05-12T03:32:51+08:00</updated>
   <id>http://blog.codinghonor.com/</id>
   <author>
     <name><![CDATA[武藏]]></name>
@@ -12,6 +12,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dev Notes 01]]></title>
+    <link href="http://blog.codinghonor.com/2015/05/12/dev-notes-01/"/>
+    <updated>2015-05-12T01:37:18+08:00</updated>
+    <id>http://blog.codinghonor.com/2015/05/12/dev-notes-01</id>
+    <content type="html"><![CDATA[<p>These days I am trying my best effort to adapt to the new environment. A lot of things need to learn, a lot of people need to know.</p>
+
+<p>During this period, I read a number of articles. Some of them are really good ones and worth to record here.</p>
+
+<h2>git</h2>
+
+<p>Most of my spare time is spending on reading git related articles, which is well worth. After a lot of reading, finally, I got agreed with the point of view that we should &ldquo;Commit Often, Perfect Later, Publish Once&rdquo;.</p>
+
+<p>1 <a href="https://sethrobertson.github.io/GitBestPractices/">Commit Often, Perfect Later, Publish Once: Git Best Practices</a></p>
+
+<p>Git is amazing for its free branching, so we&rsquo;d better make use of this. After learning from the article below, we could become a guru in git branch technology.</p>
+
+<p>2 <a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a></p>
+
+<p><img src="http://blog.codinghonor.com/images/2015/git-model.png"></p>
+
+<p>At last, there is a very cool site, where we could find some really good tutorials and articles about git.</p>
+
+<p>3 <a href="https://www.atlassian.com/git/">https://www.atlassian.com/git/</a></p>
+
+<h2>linux performance</h2>
+
+<p>There are many very useful tools in linux. I have a chance to use several of them during the work, like: strace, ltrace, pdb, etc.</p>
+
+<p><img src="http://blog.codinghonor.com/images/2015/linux-observability-tools.png"></p>
+
+<p>Above is a detailed &ldquo;Linux Performance Observability Tools&rdquo; diagram, from here:</p>
+
+<p>5 <a href="http://www.brendangregg.com/linuxperf.html">http://www.brendangregg.com/linuxperf.html</a></p>
+
+<h2>unit test</h2>
+
+<p>Before joining this team, I seldom wrote unit tests. So there are lots of things I need to catch up. There are two articles about BDD test:</p>
+
+<p>6 <a href="http://dannorth.net/introducing-bdd/">Introducing BDD</a></p>
+
+<p>7 <a href="http://martinfowler.com/articles/mocksArentStubs.html">Mocks Aren&rsquo;t Stubs</a></p>
+
+<h2>timing and profiling</h2>
+
+<p>When I tried to analyze my python code, these tools (lprun, mprun, timeit, etc) in IPython help a lot.</p>
+
+<p>8 <a href="http://pynash.org/2013/03/06/timing-and-profiling.html">Timing and Profiling in IPython</a></p>
+
+<br>
+
+
+<p>That&rsquo;s all.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[正则表达式中的IP提取与质数判断]]></title>
